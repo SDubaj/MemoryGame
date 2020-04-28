@@ -1,24 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import Flashcards from './Flashcards';
 import './App.css';
 
 function App() {
+  const [isShown,setIsShown] = useState(false);
+  function handleOnClick () {
+      setIsShown= (true);
+      console.log("ssss")
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <img src="/title3.png"/><br/>
+      { !isShown ?
+      <button className="button" onClick={e => setIsShown(true)}> START ! </button> :
+      <Flashcards function={setIsShown}/>}
     </div>
   );
 }
