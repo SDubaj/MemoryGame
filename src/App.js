@@ -6,7 +6,7 @@ function App() {
   const [isShown,setIsShown] = useState(false);
   return (
     <div className="container">
-      <img src="/title4.png" alt="Title" className="titleImg" />
+      <img src="title4.png" alt="Title" className="titleImg" />
       { !isShown ?
       <button className="button" onClick={e => setIsShown(true)}> START ! </button> :
       <Flashcards function={setIsShown}/>}
