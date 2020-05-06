@@ -103,7 +103,8 @@ function Flashcards(props) {
         return(
           <div>
           { showButton ? 
-          <div> Twój czas: <Timer setSeconds={setSeconds} isActive={isActive}/> s
+          <div> 
+            <h3>Twój czas: <Timer setSeconds={setSeconds} isActive={isActive}/> s </h3>
             <div className="cards-container">
             {cards.map(card => <Card onClick={() => handleFlip(card)} 
             value={card.word} image={card.image} isFlipped={isFlipped.includes(card)} key={card.id} />) } 

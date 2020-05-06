@@ -1,7 +1,12 @@
-
+@import 'Button.css';
+html{
+  height:100vh;
+  width:100vw;
+}
 body{
   overflow: hidden;
   height: 100vh;
+  width:100vw;
 }
 .container{
   align-items: center;
@@ -11,29 +16,33 @@ body{
   height:100vh;
 }
 .cards-container{
-  
+  cursor:pointer;
   display: flex;
   flex-wrap: wrap;
-  padding: 5%;
   margin:-10px 0 0 -10px;
 }
 
 
  .card-container {
-   flex-grow: 1;
+   flex-basis: 18%;
+  flex-grow: 0;
   display: inline-block;
   height: 250px;
-  width: 18%;
   /*box-sizing: border-box;*/
-  margin-right: 2px;
   perspective: 1000px;
   background-color: transparent;
   overflow: hidden;
   border-radius: 20px;
-  
   margin-bottom:10px;
   margin:5px;
-  
+  text-align:center;
+  justify-content: center;
+}
+
+
+.card-container.last{
+  width:25%;
+  flex:1;
 }
  .card, .side-back , .side-front {
 	width: 100%;
@@ -111,48 +120,44 @@ background: repeating-linear-gradient(
   transform: rotateY(180deg);
   
 } 
-
-.button {
-  position: absolute;
-        top: 50%;
-        left: 50%;
-        margin-right: -50%;
-        transform: translate(-50%, -50%);
-  background: #A6B8CC;
-  background-image: -webkit-linear-gradient(top, #A6B8CC, #3B4D69);
-  background-image: -moz-linear-gradient(top, #A6B8CC, #3B4D69);
-  background-image: -ms-linear-gradient(top, #A6B8CC, #3B4D69);
-  background-image: -o-linear-gradient(top, #A6B8CC, #3B4D69);
-  background-image: linear-gradient(to bottom, #A6B8CC, #3B4D69);
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  border-radius: 20px;
-  color: #FFFFFF;
-  font-family: Open Sans;
-  font-size: 40px;
-  font-weight: 100;
-  padding  : 20px;
-  box-shadow: 1px 1px 20px 0px #000000;
-  -webkit-box-shadow: 1px 1px 20px 0px #000000;
-  -moz-box-shadow: 1px 1px 20px 0px #000000;
-  text-shadow: 1px 1px 20px #000000;
-  text-decoration: none;
-  display: inline-block;
-  cursor: pointer;
-  text-align: center    
+@media only screen and (max-width: 1200px) {
+  .card-container{
+    height:200px;
   }
- 
-  
-  .button:hover {
-    background: #3B4D69;
-    background-image: -webkit-linear-gradient(top, #3B4D69, #A6B8CC);
-    background-image: -moz-linear-gradient(top, #3B4D69, #A6B8CC);
-    background-image: -ms-linear-gradient(top, #3B4D69, #A6B8CC);
-    background-image: -o-linear-gradient(top, #3B4D69, #A6B8CC);
-    background-image: linear-gradient(to bottom, #3B4D69, #A6B8CC);
-
-    text-decoration: none;
+}
+@media only screen and (max-width: 800px) {
+  body{
+    overflow: auto;
   }
+  .container{
+    width:100%;
+  }
+  .card-container{
+    flex-basis: 23%;
+    height:150px;
+  }
+  .cards-container{
+    padding:5px;
+  }
+  .card img{
+    width:80%;
+  }
+  .side-front{
+    font-size:100px;
+  }
+  .titleImg{
+    max-width: 100%;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .container{
+    width:100%;
+  }
+  .card-container{
+    flex-basis: 19%;
+  }
+}
+
 
   h1{
     font-size:3em;

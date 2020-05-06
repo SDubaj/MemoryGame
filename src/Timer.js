@@ -1,4 +1,4 @@
-import React, { useState,useEffect}  from 'react';
+import { useState,useEffect}  from 'react';
 
 export default function Timer(props) {
   const [counter, setCounter] = useState(0);
@@ -6,7 +6,6 @@ export default function Timer(props) {
 
   
   useEffect(() => {
-    console.log(isActive);
     let interval = null;
     if(isActive){
      interval = setInterval(() => {

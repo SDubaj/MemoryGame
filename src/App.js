@@ -4,13 +4,9 @@ import './App.css';
 
 function App() {
   const [isShown,setIsShown] = useState(false);
-  function handleOnClick () {
-      setIsShown= (true);
-      console.log("ssss")
-  }
   return (
     <div className="container">
-      <img src="/title3.png"/><br/>
+      <img src="/title4.png" alt="Title" className="titleImg" />
       { !isShown ?
       <button className="button" onClick={e => setIsShown(true)}> START ! </button> :
       <Flashcards function={setIsShown}/>}
