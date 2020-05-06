@@ -40,7 +40,6 @@ function Flashcards(props) {
           setTimeout(() => {
             setIsFlipped([],null);
          }, 4000);
-          console.log("cards");
         },[cards]);
 
        
@@ -61,22 +60,19 @@ function Flashcards(props) {
         setIsActive(false);
         setTimeout(() => {
           setShowButton(false);
-       }, 1000);
-        console.log(isActive);}
+       }, 1000);}
       }
       
      
 
       useEffect(() => {
         
-        console.log("ifFirst Card itp");
         if (!firstCard || !secondCard)
           return;
         (firstCard.value === secondCard.value) ? onSuccessGuess() : onFailureGuess();
       });
     
       function onSuccessGuess(){
-          console.log("Sukces!");
           resetCards();
       }
 

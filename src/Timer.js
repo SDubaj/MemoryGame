@@ -12,7 +12,6 @@ export default function Timer(props) {
       setCounter(counter => counter + 1);
     }, 1000);
   
-    console.log("isActive");
   }
     else if (!isActive) {
       
