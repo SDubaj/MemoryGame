@@ -7,7 +7,7 @@ function Flashcards(props) {
         {value:"4", word:"printer"},{value:"5", word:"pencil"}];
         const plWords = [{value:"1",word:"pen", image:"https://cdn.shoplo.com/6456/products/th640/akae/35762-c8153ff71acade138e4ae5d242b35f775d9516362b1265-36847198.jpg"},
          {value:"2", word:"kubek",image:"https://www.ikea.com/pl/pl/images/products/dinera-mug-grey-blue__0642544_PE701242_S5.JPG?f=s"}, 
-         {value:"3", word:"biurko",image:"https://d.allegroimg.com/s512/039e45/96c2991941c29da10c1246fd7a1d/BIURKO-NAROZNE-KOMPUTEROWE-B20-LEWE-155cm-BIALE"},
+         {value:"3", word:"biurko",image:"https://www.meblezagrosze.pl/upload/l650/biurko-biale-mati.jpg"},
         {value:"4", word:"drukarka",image:"https://www.mall.cz/i/42584913/450/450"},
         {value:"5",word:"ołówek", image:"https://strefaucznia.pl/38598-thickbox_default/gruby-olowek-trojkatny-zenith-simple.jpg"}];
         Array.prototype.push.apply(initialArray,plWords)
